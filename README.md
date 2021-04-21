@@ -48,5 +48,7 @@ São necessários os seguintes pré-requisitos para a execução:
 ```
 
 * Conversão das propriedades da aplicação para YML.
+* Adicionado propriedades da aplicação de ambiente de desenvolvimento e produção.
+    * Ambiente de desenvolvimento adicionado por default via o Maven.
 
 [//]: # TODO - O tipo de telefone (PhoneType) transformado em uma entidade. Inclusão de um endpoint para CRUD de tipos de telefone.
