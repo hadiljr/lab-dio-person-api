@@ -47,3 +47,6 @@ São necessários os seguintes pré-requisitos para a execução:
                 └───service
 ```
 
+* Conversão das propriedades da aplicação para YML.
+
+[//]: # TODO - O tipo de telefone (PhoneType) transformado em uma entidade. Inclusão de um endpoint para CRUD de tipos de telefone.
