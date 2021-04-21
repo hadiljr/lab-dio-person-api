@@ -52,5 +52,4 @@ São necessários os seguintes pré-requisitos para a execução:
   * Ambiente de desenvolvimento adicionado por default via o Maven.
 * Adicionado um seeder de dados para a database caso o ambiente de execução seja de dev.
   * Foi adicionado o Java Faker (https://github.com/DiUS/java-faker), para facilitar a criação dos dados.
-
-[//]: # TODO - O tipo de telefone (PhoneType) transformado em uma entidade. Inclusão de um endpoint para CRUD de tipos de telefone.
+  
