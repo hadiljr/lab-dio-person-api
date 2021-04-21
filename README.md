@@ -24,5 +24,26 @@ São necessários os seguintes pré-requisitos para a execução:
 ### Modificações Pessoais
 
 * Adição do Swagger - Utilizar http://localhost:8080/swagger-ui/
-
+* Estrutura de pacotes inspirado nas camadas de DDD (Domain Drive Design)
+```
+└───lab
+    └───hadil
+        └───dio
+            └───person
+                ├───domain
+                │   ├───dto
+                │   │   ├───request
+                │   │   └───response
+                │   ├───entity
+                │   └───enums
+                ├───infra
+                │   └───data
+                │       ├───exception
+                │       ├───mapper
+                │       └───repository
+                ├───restAPI
+                │   ├───config
+                │   └───controller
+                └───service
+```
 
