@@ -38,14 +38,14 @@ public class PersonServiceTest {
         when(personRepository.save(any(Person.class))).thenReturn(expectedSavedPerson);
 
         MessageResponseDTO expectedSuccessMessage = createExpectedSuccessMessage(expectedSavedPerson.getId());
-        MessageResponseDTO successMessage = personService.createPerson(personDTO);
+        MessageResponseDTO successMessage = personService.create(personDTO);
 
         assertEquals(expectedSuccessMessage, successMessage);
     }
 
     private MessageResponseDTO createExpectedSuccessMessage(Long savedPersonId) {
         return MessageResponseDTO.builder()
-                .message("Person successfully created with ID " + savedPersonId)
+                .message("Created person with ID  " + savedPersonId)
                 .build();
     }
 
