@@ -1,5 +1,6 @@
 package lab.hadil.dio.person.infra.data.config;
 
+import io.github.jdataforger.Forger;
 import lab.hadil.dio.person.domain.entity.Person;
 import lab.hadil.dio.person.domain.entity.Phone;
 import lab.hadil.dio.person.domain.enums.PhoneType;
@@ -15,6 +16,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Collections;
 import java.util.Locale;
+import java.util.Random;
 
 import com.github.javafaker.Faker;
 
@@ -33,12 +35,15 @@ public class Seeder {
 
     private void seedPerson(){
         Faker faker = new Faker(new Locale("pt-BR"));
-        String[] cpfs = {"756.361.380-32","536.890.330-80","819.078.380-74"};
-        for(String cpf:cpfs) {
+        Forger forger = new Forger();
+        int rndRegister = new Random().nextInt(100);
+
+
+        for(int i=0;i<rndRegister;i++) {
             Person fakePerson = Person.builder()
                     .firstName(faker.name().firstName())
                     .lastName(faker.name().lastName())
-                    .cpf(cpf)
+                    .cpf(forger.CPF().fake())
                     .birthDate(LocalDate.ofInstant(faker.date().birthday(10,80).toInstant(), ZoneId.systemDefault()))
                     .phones(Collections.singletonList(Phone.builder().number(faker.phoneNumber().phoneNumber()).type(PhoneType.MOBILE).build()))
                     .build();
